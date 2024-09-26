@@ -1,10 +1,9 @@
-SL(1): Cure your bad habit of mistyping
-=======================================
+# sl as a coreboot payload
 
-SL (Steam Locomotive) runs across your terminal when you type "sl" as
-you meant to type "ls". It's just a joke command, and not useful at
-all.
+Fork of the [sl](https://github.com/mtoyoda/sl) command to run as a coreboot payload.
 
-Copyright 1993,1998,2014 Toyoda Masashi (mtoyoda@acm.org)
+## Usage
 
-![](demo.gif)
+Compile [coreboot](https://doc.coreboot.org/tutorial/part1.html) and select `sl.elf` as the payload.
+
+Test with qemu: `qemu-system-i386 -bios build/coreboot.rom`.

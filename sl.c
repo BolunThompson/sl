@@ -1,11 +1,16 @@
 /*========================================
- *    sl.c: SL version 5.03
+ *    sl.c: SL for coreboot version 6.00
  *        Copyright 1993,1998,2014-2015
  *                  Toyoda Masashi
  *                  (mtoyoda@acm.org)
- *        Last Modified: 2014/06/03
+ *        Copyright 2024
+ *                  Bolun Thompson
+ *                  (me@bolun.dev)
+ *        Last Modified: 2024/07/24
  *========================================
  */
+/* sl version 6.00 : Port to coreboot and libpayload                         */
+/*                                              by Bolun Thompson 2024/07/26 */ 
 /* sl version 5.03 : Fix some more compiler warnings.                        */
 /*                                              by Ryan Jacobs    2015/01/19 */
 /* sl version 5.02 : Fix compiler warnings.                                  */
