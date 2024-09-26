@@ -39,8 +39,7 @@
 /*                                              by Toyoda Masashi 1992/12/11 */
 
 #include <curses.h>
-#include <signal.h>
-#include <unistd.h>
+#include <libpayload.h>
 #include "sl.h"
 
 void add_smoke(int y, int x);
@@ -82,6 +81,7 @@ void option(char *str)
 
 int main(int argc, char *argv[])
 {
+    // TODO: Stub out argc argv
     int x, i;
 
     for (i = 1; i < argc; ++i) {
@@ -90,7 +90,6 @@ int main(int argc, char *argv[])
         }
     }
     initscr();
-    signal(SIGINT, SIG_IGN);
     noecho();
     curs_set(0);
     nodelay(stdscr, TRUE);
@@ -109,10 +108,12 @@ int main(int argc, char *argv[])
         }
         getch();
         refresh();
-        usleep(40000);
+        napms(40);
     }
     mvcur(0, COLS - 1, LINES - 1, 0);
     endwin();
+
+    halt();
 
     return 0;
 }
